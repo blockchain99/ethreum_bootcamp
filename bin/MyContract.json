@@ -1,0 +1,127 @@
+{
+    "contractName": "MyContract",
+    "abi": [
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "myString",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.5.11+commit.c082d0b4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"myString\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/ys/ethreum_bootcamp/MyContract1.sol\":\"MyContract\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/ys/ethreum_bootcamp/MyContract1.sol\":{\"keccak256\":\"0xcfb92c40c1926832aa12ff381864f68b0296d8dc9b9ef66eb3cf5c17a0fc6f9a\",\"urls\":[\"bzz-raw://211d73bcf9b8259618a70ae2f4e26a596c2aac063ed7d69f18619940ce3de4b8\",\"dweb:/ipfs/Qmb3AHyyBM8uYdLvQSnhdPR5m5tiKUoVRcdVxFenpj4JdK\"]}},\"version\":1}",
+    "bytecode": "60c0604052600f60808190527f68656c6c6f20636f6e747261637431000000000000000000000000000000000060a090815261003e9160009190610051565b5034801561004b57600080fd5b506100ec565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061009257805160ff19168380011785556100bf565b828001600101855582156100bf579182015b828111156100bf5782518255916020019190600101906100a4565b506100cb9291506100cf565b5090565b6100e991905b808211156100cb57600081556001016100d5565b90565b610170806100fb6000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063492bfa1814610030575b600080fd5b6100386100ad565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561007257818101518382015260200161005a565b50505050905090810190601f16801561009f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6000805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156101335780601f1061010857610100808354040283529160200191610133565b820191906000526020600020905b81548152906001019060200180831161011657829003601f168201915b50505050508156fea265627a7a72315820a380812b2ca2d0c4cdfb194ddf2464d758b588d741a8abac25360fa394adaf0564736f6c634300050b0032",
+    "deployedBytecode": "608060405234801561001057600080fd5b506004361061002b5760003560e01c8063492bfa1814610030575b600080fd5b6100386100ad565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561007257818101518382015260200161005a565b50505050905090810190601f16801561009f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6000805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156101335780601f1061010857610100808354040283529160200191610133565b820191906000526020600020905b81548152906001019060200180831161011657829003601f168201915b50505050508156fea265627a7a72315820a380812b2ca2d0c4cdfb194ddf2464d758b588d741a8abac25360fa394adaf0564736f6c634300050b0032",
+    "sourceMap": "52:42:0:-;26:71;52:42;;26:71;52:42;;;;;;;;;;-1:-1:-1;;52:42:0;;:::i;:::-;;26:71;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:71:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;26:71:0;;;-1:-1:-1;26:71:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+    "deployedSourceMap": "26:71:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:71:0;;;;;;;;;;;;;;;;;;;52:42;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;52:42:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;52:42:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+    "sourcePath": "/home/ys/ethreum_bootcamp/MyContract1.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.11+commit.c082d0b4"
+    },
+    "ast": {
+        "absolutePath": "/home/ys/ethreum_bootcamp/MyContract1.sol",
+        "exportedSymbols": {
+            "MyContract": [
+                5
+            ]
+        },
+        "id": 6,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.5",
+                    ".11"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:24:0"
+            },
+            {
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "documentation": null,
+                "fullyImplemented": true,
+                "id": 5,
+                "linearizedBaseContracts": [
+                    5
+                ],
+                "name": "MyContract",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "id": 4,
+                        "name": "myString",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 5,
+                        "src": "52:42:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_string_storage",
+                            "typeString": "string"
+                        },
+                        "typeName": {
+                            "id": 2,
+                            "name": "string",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "52:6:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_string_storage_ptr",
+                                "typeString": "string"
+                            }
+                        },
+                        "value": {
+                            "argumentTypes": null,
+                            "hexValue": "68656c6c6f20636f6e747261637431",
+                            "id": 3,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "77:17:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_0fc847e01648d623ac713a6a64688571666ae308560c0cd1b799893cdb7970ca",
+                                "typeString": "literal_string \"hello contract1\""
+                            },
+                            "value": "hello contract1"
+                        },
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 6,
+                "src": "26:71:0"
+            }
+        ],
+        "src": "0:97:0"
+    },
+    "functionHashes": {
+        "myString()": "492bfa18"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "73600",
+            "executionCost": "infinite",
+            "totalCost": "infinite"
+        },
+        "external": {
+            "myString()": "infinite"
+        }
+    }
+}

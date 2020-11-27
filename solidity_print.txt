@@ -1,0 +1,95 @@
+﻿pragma solidity ^0.5.13;
+
+contract WorkingWithVariables {
+    uint256 public myUint;
+
+    function setMyUint(uint _myUint) public {
+        myUint = _myUint;
+    }
+
+    bool public myBool;
+
+    function setMyBool(bool _myBool) public {
+        myBool = _myBool;
+    }
+    
+    uint8 public myUint8;
+    
+    function setMyUint8(uint8 _myUint8) public {
+        myUint8 = _myUint8;
+    }
+    
+    function incrementUint() public {
+        myUint8++;
+    }
+    
+    function decrementUint() public {
+    myUint8--;
+    }
+
+    address myAddress;
+
+    function setAddress(address _address) public {
+        myAddress = _address;
+    }
+
+    function getBalanceOfAddress() public view returns(uint) {
+        return myAddress.balance;
+    }
+}
+
+
+----
+pragma solidity ^0.5.13;
+
+contract SendMoneyExample {
+    
+    uint public balanceReceived;
+    
+    //global variable msg.value
+    //send ether money from an account to this smart contract
+    function receiveMoney() public payable {
+        balanceReceived += msg.value;
+    }
+    
+    //balance of this(this smart contract)'s address
+    function getBalance() public view returns(uint) {
+        return address(this).balance;
+    }
+    
+    //if we want to send money to address : payable
+    //msg.sender is address to call this smart contract
+    function withdrawMoney() public {
+        address payable to = msg.sender;
+        to.transfer(this.getBalance());
+    }
+}
+
+–  pausing and stopping smart contacting---
+– 1. 
+pragma solidity >=0.5.11 <0.7.0;
+contract StartStopUpdateExample {
+ function sendMoney() public payable {
+ }
+ function withdrawAllMoney(address payable _to) public {
+ _to.transfer(address(this).balance);
+ }
+}
+
+– 2.
+pragma solidity >=0.5.11 <0.7.0;
+contract StartStopUpdateExample {
+
+ address owner;
+
+ constructor() public {
+ owner = msg.sender;
+ }
+
+ function sendMoney() public payable {
+ }
+ function withdrawAllMoney(address payable _to) public {
+ require(msg.sender == owner, "You cannot withdraw!");
+ _to.transfer(address(this).balance);
+ }
+}

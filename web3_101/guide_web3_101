@@ -1,0 +1,166 @@
+
+(1) S05L02+-+Using+Web3js.pdf
+
+-after install web3: by > npm install –save web3
+1. /Home/ganache-2.4.0-linux-x86_64.AppImage -> double click to excute !
+ - address: 0x86C18f0c244e0B4048d9565C0db922Ac91AfaFdd
+ - RPC SERVER : HTTP://127.0.0.1:7545
+2. in this directorty(web3_js) prompt > node 
+3. node js prompt ">" 
+ let Web3 = require('web3'); //attention CAPITAL Web3
+let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+web3.eth.getBalance("copy address from ganache App: 0x86C18f0c244e0B4048d9565C0db922Ac91AfaFdd").then(console.log);
+4. web3.eth.sendTransaction({from: "ACCOUNT_ADDRESS_1"
+, to: "ACCOUNT_ADDRESS_2",value: web3.utils.toWei("1","ether")});
+: 0x86C18f0c244e0B4048d9565C0db922Ac91AfaFdd -> 0xd38042904523Df40A776EB2CE0E31fE0bbeaF8B0
+
+(2) ys:~/ethreum_bootcamp/web3_101$ node
+> let Web3 = require("web3");
+> Web3 //show everythings in web3 variables
+> var web3 = new Web3(new Web3.providers.   //then tab key -> shows all available providers 
+> var web3 = new Web3(new Web3.providers.HttpProvider("localhost:7545"));
+> web3 //show 
+> web3. //then tab key two times -> available web3 command
+> web3.eth.getBalance("0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02e").then(console.log);
+ //address in Ganache -> shows " > 99997687700000000000 "
+
+> web3.eth.getBalance("0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02e").
+then(function(result) {console.log(web3.utils.fromWei(result, "ether"));});
+> 99.9976877 //result
+
+(3) send from 0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02e to 0x6d58367011A4b8c6ffa94Ca94e1360E45D7a9ee7 , 1 ether
+- use same end point above. 
+//below no need promise part -> just sendTransaction from account1 to account2, 1 ether: check in ganache.
+-> account1: 99ether , account: 101 ether.
+-> check in Transaction tab in ganache
+> web3.eth.sendTransaction({from: "0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02e", to:"0x6d58367011A4b8c6ffa94Ca94e1360E45D7a9ee7", value:web3.utils.toWei("1", "ether")});
+Promise {
+  <pending>,
+  _events: Events <[Object: null prototype] {}> {},
+  emit: [Function: emit],
+  on: [Function: on],
+  once: [Function: once],
+  off: [Function: removeListener],
+  listeners: [Function: listeners],
+  addListener: [Function: on],
+  removeListener: [Function: removeListener],
+  removeAllListeners: [Function: removeAllListeners]
+}
+
+-------------------------------------------------------
+(4) In html file, same logic with above -> Remix
+- Web3 Provider : RPC SERVER : HTTP://127.0.0.1:7545 (GANACHE)
+- Click "deploy"
+
+ [call] from: 0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02eto: SomeContract.myUint()data: 0x065...40f7e
+
+- data:"0x06540f7e" is from input in remix
+> web3.eth.call({from: "0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02e", to:"0x6d58367011A4b8c6ffa94Ca94e1360E45D7a9ee7", data:"0x06540f7e"}).then(console.log);
+> 0x
+
+- into hex encoded function signature of myUint() ->
+>web3.utils.sha3("myUint()");
+'0x06540f7eac53ad8a460dca00c89ac4438982ca36ff3248355f14b688948f672a'
+-> 0x06540f7e - first part: same as input data 
+
+> web3.utils.sha3("myUint()").substr(0,10);
+'0x06540f7e'
+
+> web3.eth.call({from: "0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02e", to:"0x6d58367011A4b8c6ffa94Ca94e1360E45D7a9ee7", data:web3.utils.sha3("myUint()").substr(0,10)}).then(console.log);
+Promise { <pending> }
+> 0x
+
+- copy ABI in remix compiler panel(left), then paste on ">" prompt
+It looks like asf:----ABI---------
+[
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "myUint",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_myUint",
+				"type": "uint256"
+			}
+		],
+		"name": "setUint",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
+------- enf of asf -------------
+//web3.eth.Contract(ABI, ADDR);
+>  var contract_2 = new web3.eth.Contract([
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "myUint",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_myUint",
+				"type": "uint256"
+			}
+		],
+		"name": "setUint",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+], "0xC58bd45813731d46386Cc81eAb13eF3546d169a7");
+  //contract address from ngix
+  * to find contract address : add 
+   ---
+   function getContractAddress() public view returns(address) {
+        return address(this);
+    }--- in SomeContract.sol 
+     -> address: 0xC58bd45813731d46386Cc81eAb13eF3546d169a7
+
+- then interact with smart contract. 
+> contract_3.methods.myUint().call().then(console.log);
+Promise { <pending> }
+> 10
+
+> contract_3.methods.myUint().call().then(console.log).catch(console.error);
+
+> contract_3.methods.setUint(50).send({from:"0x50Fa5faa4Cb5c2A15eCEd022EE1803FbD357d02e"}).then(console.log);
+
+> contract_3.methods.myUint().call().then(console.log);
+Promise { <pending> }
+> 50
+
+(5 ) S05L03+-+Using+Web3Js+to+Interact+with+Smart+Contracts.pdf
+1. Excute ys:~/truffle$ ganache-2.4.0-linux-x86_64.AppImage -> 
+check address & Server url(HTTP://127.0.0.1:7545)
+2. In remix, Left : Environment -> select Web3 Provider 
+3. In popup window, input HTTP://127.0.0.1:7545 as Web3 Provider

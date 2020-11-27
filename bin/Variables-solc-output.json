@@ -1,0 +1,254 @@
+{
+    "contracts": {
+        "/home/ys/ethreum_bootcamp/Variables.sol": {
+            "WorkingWithVariables": {
+                "abi": [
+                    {
+                        "constant": true,
+                        "inputs": [],
+                        "name": "myUnit",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "payable": false,
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "constant": false,
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "_myUnit",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "setMyUnit",
+                        "outputs": [],
+                        "payable": false,
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    }
+                ],
+                "devdoc": {
+                    "methods": {}
+                },
+                "evm": {
+                    "bytecode": {
+                        "linkReferences": {},
+                        "object": "608060405234801561001057600080fd5b5060ab8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80636a345bb4146037578063b36cbc5f14604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60005556fea265627a7a72315820b36e5badf202b154cb816c1a6d1732ac47634e531dfe8853f3a4f5ac654bbf6c64736f6c634300050d0032",
+                        "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0xAB DUP1 PUSH2 0x1F PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x6A345BB4 EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0xB36CBC5F EQ PUSH1 0x4F JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x6B JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x69 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x63 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x71 JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 SLOAD DUP2 JUMP JUMPDEST PUSH1 0x0 SSTORE JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xB3 PUSH15 0x5BADF202B154CB816C1A6D1732AC47 PUSH4 0x4E531DFE DUP9 MSTORE8 RETURN LOG4 CREATE2 0xAC PUSH6 0x4BBF6C64736F PUSH13 0x634300050D0032000000000000 ",
+                        "sourceMap": "26:139:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:139:0;;;;;;;"
+                    },
+                    "deployedBytecode": {
+                        "linkReferences": {},
+                        "object": "6080604052348015600f57600080fd5b506004361060325760003560e01c80636a345bb4146037578063b36cbc5f14604f575b600080fd5b603d606b565b60408051918252519081900360200190f35b606960048036036020811015606357600080fd5b50356071565b005b60005481565b60005556fea265627a7a72315820b36e5badf202b154cb816c1a6d1732ac47634e531dfe8853f3a4f5ac654bbf6c64736f6c634300050d0032",
+                        "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x6A345BB4 EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0xB36CBC5F EQ PUSH1 0x4F JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x6B JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x69 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x63 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x71 JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 SLOAD DUP2 JUMP JUMPDEST PUSH1 0x0 SSTORE JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xB3 PUSH15 0x5BADF202B154CB816C1A6D1732AC47 PUSH4 0x4E531DFE DUP9 MSTORE8 RETURN LOG4 CREATE2 0xAC PUSH6 0x4BBF6C64736F PUSH13 0x634300050D0032000000000000 ",
+                        "sourceMap": "26:139:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:139:0;;;;;;;;;;;;;;;;;;;;;;;;62:21;;;:::i;:::-;;;;;;;;;;;;;;;;90:73;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;90:73:0;;:::i;:::-;;62:21;;;;:::o;90:73::-;140:6;:16;90:73::o"
+                    },
+                    "gasEstimates": {
+                        "creation": {
+                            "codeDepositCost": "34200",
+                            "executionCost": "87",
+                            "totalCost": "34287"
+                        },
+                        "external": {
+                            "myUnit()": "376",
+                            "setMyUnit(uint256)": "20189"
+                        }
+                    },
+                    "methodIdentifiers": {
+                        "myUnit()": "6a345bb4",
+                        "setMyUnit(uint256)": "b36cbc5f"
+                    }
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.5.13+commit.5b0b510c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"myUnit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_myUnit\",\"type\":\"uint256\"}],\"name\":\"setMyUnit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/ys/ethreum_bootcamp/Variables.sol\":\"WorkingWithVariables\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/ys/ethreum_bootcamp/Variables.sol\":{\"keccak256\":\"0xa03a461b9fda61fa27cf3bd34aff5ea5cc8383aecd75d4f8e62b09418300f589\",\"urls\":[\"bzz-raw://b4d0bf24f6409b2956ee676acd05d974c1d313620b99b7a7881b74dfa1a76044\",\"dweb:/ipfs/QmcqPbZvBcoBjpps49JUao3cRhKm4rnnBbuVd7wfVzr3Xv\"]}},\"version\":1}",
+                "userdoc": {
+                    "methods": {}
+                }
+            }
+        }
+    },
+    "sources": {
+        "/home/ys/ethreum_bootcamp/Variables.sol": {
+            "ast": {
+                "absolutePath": "/home/ys/ethreum_bootcamp/Variables.sol",
+                "exportedSymbols": {
+                    "WorkingWithVariables": [
+                        14
+                    ]
+                },
+                "id": 15,
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 1,
+                        "literals": [
+                            "solidity",
+                            "^",
+                            "0.5",
+                            ".13"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "0:24:0"
+                    },
+                    {
+                        "baseContracts": [],
+                        "contractDependencies": [],
+                        "contractKind": "contract",
+                        "documentation": null,
+                        "fullyImplemented": true,
+                        "id": 14,
+                        "linearizedBaseContracts": [
+                            14
+                        ],
+                        "name": "WorkingWithVariables",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "constant": false,
+                                "id": 3,
+                                "name": "myUnit",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 14,
+                                "src": "62:21:0",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 2,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "62:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 12,
+                                    "nodeType": "Block",
+                                    "src": "130:33:0",
+                                    "statements": [
+                                        {
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 10,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 8,
+                                                    "name": "myUnit",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 3,
+                                                    "src": "140:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "Assignment",
+                                                "operator": "=",
+                                                "rightHandSide": {
+                                                    "argumentTypes": null,
+                                                    "id": 9,
+                                                    "name": "_myUnit",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 5,
+                                                    "src": "149:7:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "140:16:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "id": 11,
+                                            "nodeType": "ExpressionStatement",
+                                            "src": "140:16:0"
+                                        }
+                                    ]
+                                },
+                                "documentation": null,
+                                "id": 13,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "setMyUnit",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 6,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 5,
+                                            "name": "_myUnit",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 13,
+                                            "src": "109:12:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 4,
+                                                "name": "uint",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "109:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "value": null,
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "108:14:0"
+                                },
+                                "returnParameters": {
+                                    "id": 7,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [],
+                                    "src": "130:0:0"
+                                },
+                                "scope": 14,
+                                "src": "90:73:0",
+                                "stateMutability": "nonpayable",
+                                "superFunction": null,
+                                "visibility": "public"
+                            }
+                        ],
+                        "scope": 15,
+                        "src": "26:139:0"
+                    }
+                ],
+                "src": "0:166:0"
+            },
+            "id": 0
+        }
+    }
+}
